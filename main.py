@@ -31,7 +31,7 @@ def downstatus(statusfile,message):
 		with open(statusfile,"r") as downread:
 			txt = downread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"__𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 ♀️__ : **{txt}**")
+			bot.edit_message_text(message.chat.id, message.id, f" 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 🦋 : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -249,7 +249,7 @@ USAGE = """**FOR PUBLIC CHATS**
 
 **__just send post/s link__**
 
-**FOR PRIVATE CHATS**
+""**FOR PRIVATE CHATS**""
 
 **__first send invite link of the chat (unnecessary if the account of string session already member of the chat)
 then send post/s link__**
