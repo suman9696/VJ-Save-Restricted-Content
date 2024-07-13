@@ -31,7 +31,7 @@ def downstatus(statusfile,message):
 		with open(statusfile,"r") as downread:
 			txt = downread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"Downloaded ♨️ : **{txt}**")
+			bot.edit_message_text(message.chat.id, message.id, f"𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 ♨️ : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -48,7 +48,7 @@ def upstatus(statusfile,message):
 		with open(statusfile,"r") as upread:
 			txt = upread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"Uploaded  : **{txt}**")
+			bot.edit_message_text(message.chat.id, message.id, f"𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 ♀️ : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -63,8 +63,8 @@ def progress(current, total, message, type):
 # start command
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	bot.send_message(message.chat.id, f"**💠 Hi** **{message.from_user.mention}**, **I am Save Restricted Bot, I can send you restricted content by it's post link**\n\n{USAGE}",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("☣️ Bot Developer", url="tg://openmessage?user_id=2112247533")]]), reply_to_message_id=message.id)
+	bot.send_message(message.chat.id, f"**💠 𝙷𝚒** **{message.from_user.mention}**, **𝙸 𝚊𝚖 𝚂𝚊𝚟𝚎 𝚁𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝙱𝚘𝚝, 𝙸 𝚌𝚊𝚗 𝚜𝚎𝚗𝚍 𝚢𝚘𝚞 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝚌𝚘𝚗𝚝𝚎𝚗𝚝 𝚋𝚢 𝚒𝚝'𝚜 𝚙𝚘𝚜𝚝 𝚕𝚒𝚗𝚔**\n\n{USAGE}",
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("☣️ 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", url="tg://openmessage?user_id=2112247533")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
@@ -245,22 +245,22 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
 	except: pass
 
 
-USAGE = """**FOR PUBLIC CHATS**
+USAGE = """**𝙵𝙾𝚁 𝙿𝚄𝙱𝙻𝙸𝙲 𝙲𝙷𝙰𝚃𝚂**
 
 ```
-just send post/s link
+𝚓𝚞𝚜𝚝 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔
 ```
 
-**FOR PRIVATE CHATS**
+**𝙵𝙾𝚁 𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙲𝙷𝙰𝚃𝚂**
 
 ```
-first send invite link of the chat (unnecessary if the account of string session already member of the chat)
-then send post/s link
+𝚏𝚒𝚛𝚜𝚝 𝚜𝚎𝚗𝚍 𝚒𝚗𝚟𝚒𝚝𝚎 𝚕𝚒𝚗𝚔 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝 (𝚞𝚗𝚗𝚎𝚌𝚎𝚜𝚜𝚊𝚛𝚢 𝚒𝚏 𝚝𝚑𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚘𝚏 𝚜𝚝𝚛𝚒𝚗𝚐 𝚜𝚎𝚜𝚜𝚒𝚘𝚗 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚖𝚎𝚖𝚋𝚎𝚛 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝)
+𝚝𝚑𝚎𝚗 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔
 ```
 
-**MULTI POSTS**
+**𝙼𝚄𝙻𝚃𝙸 𝙿𝙾𝚂𝚃𝚂**
 
-**Example**
+**𝙴𝚡𝚊𝚖𝚙𝚕𝚎**
 ```
 https://t.me/c/xxxx/101 - 120
 ```
