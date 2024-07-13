@@ -31,7 +31,7 @@ def downstatus(statusfile,message):
 		with open(statusfile,"r") as downread:
 			txt = downread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍 ♨️ : **{txt}**")
+			bot.edit_message_text(message.chat.id, message.id, f"**𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚍** ♨️ : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -48,7 +48,7 @@ def upstatus(statusfile,message):
 		with open(statusfile,"r") as upread:
 			txt = upread.read()
 		try:
-			bot.edit_message_text(message.chat.id, message.id, f"𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 ♀️ : **{txt}**")
+			bot.edit_message_text(message.chat.id, message.id, f"**𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍** ♀️ : **{txt}**")
 			time.sleep(10)
 		except:
 			time.sleep(5)
@@ -63,7 +63,7 @@ def progress(current, total, message, type):
 # start command
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	bot.send_message(message.chat.id, f"**💠 𝙷𝚒** **{message.from_user.mention}**, **𝙸 𝚊𝚖 𝚂𝚊𝚟𝚎 𝚁𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝙱𝚘𝚝, 𝙸 𝚌𝚊𝚗 𝚜𝚎𝚗𝚍 𝚢𝚘𝚞 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝚌𝚘𝚗𝚝𝚎𝚗𝚝 𝚋𝚢 𝚒𝚝'𝚜 𝚙𝚘𝚜𝚝 𝚕𝚒𝚗𝚔**\n\n{USAGE}",
+	bot.send_message(message.chat.id, f"**💜 𝙷𝚒** **{message.from_user.mention}**, **𝙸 𝚊𝚖 𝚂𝚊𝚟𝚎 𝚁𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝙱𝚘𝚝, 𝙸 𝚌𝚊𝚗 𝚜𝚎𝚗𝚍 𝚢𝚘𝚞 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝚌𝚘𝚗𝚝𝚎𝚗𝚝 𝚋𝚢 𝚒𝚝'𝚜 𝚙𝚘𝚜𝚝 𝚕𝚒𝚗𝚔**\n\n{USAGE}",
 	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("☣️ 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", url="tg://openmessage?user_id=2112247533")]]), reply_to_message_id=message.id)
 
 
@@ -152,7 +152,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			bot.send_message(message.chat.id, msg.text, entities=msg.entities, reply_to_message_id=message.id)
 			return
 
-		smsg = bot.send_message(message.chat.id, 'Downloading', reply_to_message_id=message.id)
+		smsg = bot.send_message(message.chat.id, '**𝐋𝐨𝐚𝐝𝐢𝐧𝐠......**', reply_to_message_id=message.id)
 		dosta = threading.Thread(target=lambda:downstatus(f'{message.id}downstatus.txt',smsg),daemon=True)
 		dosta.start()
 		file = acc.download_media(msg, progress=progress, progress_args=[message,"down"])
@@ -248,21 +248,21 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
 USAGE = """**𝙵𝙾𝚁 𝙿𝚄𝙱𝙻𝙸𝙲 𝙲𝙷𝙰𝚃𝚂**
 
 ```
-𝚓𝚞𝚜𝚝 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔
+**𝚓𝚞𝚜𝚝 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔**
 ```
 
 **𝙵𝙾𝚁 𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙲𝙷𝙰𝚃𝚂**
 
 ```
-𝚏𝚒𝚛𝚜𝚝 𝚜𝚎𝚗𝚍 𝚒𝚗𝚟𝚒𝚝𝚎 𝚕𝚒𝚗𝚔 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝 (𝚞𝚗𝚗𝚎𝚌𝚎𝚜𝚜𝚊𝚛𝚢 𝚒𝚏 𝚝𝚑𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚘𝚏 𝚜𝚝𝚛𝚒𝚗𝚐 𝚜𝚎𝚜𝚜𝚒𝚘𝚗 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚖𝚎𝚖𝚋𝚎𝚛 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝)
-𝚝𝚑𝚎𝚗 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔
+**𝚏𝚒𝚛𝚜𝚝 𝚜𝚎𝚗𝚍 𝚒𝚗𝚟𝚒𝚝𝚎 𝚕𝚒𝚗𝚔 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝 (𝚞𝚗𝚗𝚎𝚌𝚎𝚜𝚜𝚊𝚛𝚢 𝚒𝚏 𝚝𝚑𝚎 𝚊𝚌𝚌𝚘𝚞𝚗𝚝 𝚘𝚏 𝚜𝚝𝚛𝚒𝚗𝚐 𝚜𝚎𝚜𝚜𝚒𝚘𝚗 𝚊𝚕𝚛𝚎𝚊𝚍𝚢 𝚖𝚎𝚖𝚋𝚎𝚛 𝚘𝚏 𝚝𝚑𝚎 𝚌𝚑𝚊𝚝)
+𝚝𝚑𝚎𝚗 𝚜𝚎𝚗𝚍 𝚙𝚘𝚜𝚝/𝚜 𝚕𝚒𝚗𝚔**
 ```
 
 **𝙼𝚄𝙻𝚃𝙸 𝙿𝙾𝚂𝚃𝚂**
 
 **𝙴𝚡𝚊𝚖𝚙𝚕𝚎**
 ```
-https://t.me/c/xxxx/101 - 120
+**https://t.me/c/xxxx/101 - 120**
 ```
 """
 
