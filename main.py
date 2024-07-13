@@ -63,8 +63,8 @@ def progress(current, total, message, type):
 # start command
 @bot.on_message(filters.command(["start"]))
 def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-	bot.send_message(message.chat.id, f"**🎀 𝙷𝚒** **{message.from_user.mention}**, **𝙸 𝚊𝚖 𝚂𝚊𝚟𝚎 𝚁𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝙱𝚘𝚝, 𝙸 𝚌𝚊𝚗 𝚜𝚎𝚗𝚍 𝚢𝚘𝚞 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝚌𝚘𝚗𝚝𝚎𝚗𝚝 𝚋𝚢 𝚒𝚝'𝚜 𝚙𝚘𝚜𝚝 𝚕𝚒𝚗𝚔**\n\n{USAGE}",
-	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("☣️ 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", url="tg://openmessage?user_id=2112247533")]]), reply_to_message_id=message.id)
+	bot.send_message(message.chat.id, f"**♻️ 𝙷𝚒** **{message.from_user.mention}**, **𝙸 𝚊𝚖 𝚂𝚊𝚟𝚎 𝚁𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝙱𝚘𝚝, 𝙸 𝚌𝚊𝚗 𝚜𝚎𝚗𝚍 𝚢𝚘𝚞 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝𝚎𝚍 𝚌𝚘𝚗𝚝𝚎𝚗𝚝 𝚋𝚢 𝚒𝚝'𝚜 𝚙𝚘𝚜𝚝 𝚕𝚒𝚗𝚔**\n\n{USAGE}",
+	reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("☢️ 𝐁𝐨𝐭 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", url="tg://openmessage?user_id=2112247533")]]), reply_to_message_id=message.id)
 
 
 @bot.on_message(filters.text)
@@ -152,7 +152,7 @@ def handle_private(message: pyrogram.types.messages_and_media.message.Message, c
 			bot.send_message(message.chat.id, msg.text, entities=msg.entities, reply_to_message_id=message.id)
 			return
 
-		smsg = bot.send_message(message.chat.id, '**Loading ▣▣▣▢▢▢**', reply_to_message_id=message.id)
+		smsg = bot.send_message(message.chat.id, '**Loading 🔄**', reply_to_message_id=message.id)
 		dosta = threading.Thread(target=lambda:downstatus(f'{message.id}downstatus.txt',smsg),daemon=True)
 		dosta.start()
 		file = acc.download_media(msg, progress=progress, progress_args=[message,"down"])
@@ -245,17 +245,17 @@ def get_message_type(msg: pyrogram.types.messages_and_media.message.Message):
 	except: pass
 
 
-USAGE = """**☞ 𝗙𝗼𝗿 𝗣𝘂𝗯𝗹𝗶𝗰 𝗖𝗵𝗮𝘁𝘀**
+USAGE = """**🇨🇭 𝗙𝗼𝗿 𝗣𝘂𝗯𝗹𝗶𝗰 𝗖𝗵𝗮𝘁𝘀 🇨🇭**
 ```
 𝐉𝐮𝐬𝐭 𝐒𝐞𝐧𝐝 𝐏𝐨𝐬𝐭/𝐬 𝐋𝐢𝐧𝐤
 ```
 
-**☞ 𝗙𝗼𝗿 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗖𝗵𝗮𝘁𝘀**
+**🇨🇭 𝗙𝗼𝗿 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗖𝗵𝗮𝘁𝘀 🇨🇭**
 ```
 𝐟𝐢𝐫𝐬𝐭 𝐬𝐞𝐧𝐝 𝐢𝐧𝐯𝐢𝐭𝐞 𝐥𝐢𝐧𝐤 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐡𝐚𝐭 (𝐮𝐧𝐧𝐞𝐜𝐞𝐬𝐬𝐚𝐫𝐲 𝐢𝐟 𝐭𝐡𝐞 𝐚𝐜𝐜𝐨𝐮𝐧𝐭 𝐨𝐟 𝐬𝐭𝐫𝐢𝐧𝐠 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 𝐚𝐥𝐫𝐞𝐚𝐝𝐲 𝐦𝐞𝐦𝐛𝐞𝐫 𝐨𝐟 𝐭𝐡𝐞 𝐜𝐡𝐚𝐭) 𝐭𝐡𝐞𝐧 𝐬𝐞𝐧𝐝 𝐩𝐨𝐬𝐭/𝐬 𝐥𝐢𝐧𝐤
 ```
 
-**☞ 𝗠𝘂𝗹𝘁𝗶 𝗣𝗼𝘀𝘁𝘀**
+**🇨🇭 𝗠𝘂𝗹𝘁𝗶 𝗣𝗼𝘀𝘁𝘀 🇨🇭**
 ```
 𝚑𝚝𝚝𝚙𝚜://𝚝.𝚖𝚎/𝚌/𝚡𝚡𝚡𝚡/101 - 110
 ```
