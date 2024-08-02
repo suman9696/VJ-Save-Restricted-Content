@@ -1,4 +1,4 @@
-git+https://github.com/5hojib/pyrogram-peer-fix.git
+git+https://github.com/KurimuzonAkuma/pyrogram
 tgcrypto
 flask
 gunicorn==20.1.0
